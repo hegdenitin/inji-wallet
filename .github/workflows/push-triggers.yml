@@ -77,7 +77,7 @@ jobs:
 #      SLACK_WEBHOOK_URL: '${{ secrets.SLACK_WEBHOOK_INJI_TEAM }}'
 
   build-maven-uitest-inji-wallet:
-    uses: mosip/kattu/.github/workflows/maven-build.yml@v0.0.1-java21
+    uses: mosip/kattu/.github/workflows/maven-build.yml@v0.0.1
     with:
       SERVICE_LOCATION: ./injitest
       BUILD_ARTIFACT: uitest-inji-wallet
@@ -155,7 +155,7 @@ jobs:
             ONLY_DOCKER: true
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
-    uses: mosip/kattu/.github/workflows/docker-build.yml@v0.0.1-java21
+    uses: mosip/kattu/.github/workflows/docker-build.yml@v0.0.1
     with:
       SERVICE_LOCATION: ${{ matrix.SERVICE_LOCATION }}
       SERVICE_NAME: ${{ matrix.SERVICE_NAME }}
